@@ -1,0 +1,100 @@
+<!-- Magaly Valdez -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+<body>
+
+    <h1>Welcome, this is my assignment for the final. Using CSS in webpages.
+        <br> The name for this page is INDEX.
+    </h1>
+    <h2>Magaly Valdez
+        <br> 2/5/2024
+        <br> UPDATED (Assignment 7.1) 2/26/2024
+        <br> UPDATED (2) FINAL PROJECT , 4/26/2024
+    </h2>
+
+<h3>
+
+    <nav>
+
+        <ul> 
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="boards.html">Boards</a></li>
+            <li> <a href="DoubleDigits.html">Game</a></li>
+<li> <a href="W9 Magaly Valdez.html">Palindrome</a></li>
+<li> <a href="strings.html">Strings</a></li>
+<li> <a href="W10 Assignment.html">Table</a></li>
+
+        </ul>
+        
+    </nav>
+
+</h3>
+<!-- This is the button that we can press to move the image around -->
+<input type="button" onclick="startImageMove();" value="Start Moving Image">
+
+<!-- This is the button that we can press to stop moving the image around -->
+<input type="button" onclick="stopImageMove();" value="Stop Moving Image">
+
+<!-- The image itself -->
+    <p>
+        <img id="memeImage" src="meme.jpg" alt="Meme Image">
+    </p>
+   
+<footer>
+    
+    <nav>
+            <a href="boards.html"</a>
+                BOARDS
+        </nav>
+    
+
+</footer>
+    
+<script>
+var intervalId = 0;
+
+
+    // This function will help make the image move about.
+    function startImageMove(){
+var meme = document.getElementById("memeImage");
+
+intervalId = setInterval(function(){
+    // X cooridnate
+    var newX = Math.floor(Math.random() * 1000);
+
+    // Y Coordinate
+    var newY = Math.floor(Math.random() * 1000);
+    
+    meme.style.left = newX+"px";
+    meme.style.top = newY+"px";
+
+    console.log("x: " + meme.style.left + " top:" + meme.style.top);
+}, 1000);
+// This image will move every second
+
+
+
+    }
+
+    function stopImageMove(){
+        clearInterval(intervalId);
+    }
+
+    // The function to generate the coordinates randomly
+    function getRandomCoordinate(){
+        return Math.floor(Math.random() * 1000);
+
+    }
+</script>
+
+
+
+    <link rel="stylesheet" href="main.css"
+
+</body>
+</html>

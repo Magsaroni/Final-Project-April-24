@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W10 Pizza Stats</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Page title, should only have one h1. -->
+<h1>Pizza Chef Stats</h1>
+
+<p>
+    Total Pizzas Baked <span id="totalPizzas"></span>
+</p>
+<p>
+    Baking Level <span id="bakingLevel"></span>
+</p>
+<label for="newPizzas">New Pizzas Baked: </label>
+<input type="number" id="newPizzas" name="newPizzas" min="0" max="1000" value="0">
+
+<button onclick="updatePizzaStats()">Update Stats</button>
+
+<p>
+    Available Toppings: <span id="toppings"></span>
+</p>
+
+<script>
+    //This runs when the button on the page has been clicked.
+    function updatePizzaStats(){
+        var newPizzaInput = parseInt(document.getElementById("newPizzas").value);
+
+        var totalPizzasSpan = document.getElementById("totalPizzas");
+
+        var bakingLevelSpan = document.getElementById("bakingLevel");
+
+        var totalPizzas = calculateTotalPizzas(newPizzaInput);
+
+        //Update the total pizza span.
+
+        totalPizzasSpan.innerText = totalPizzas;
+
+        // Achieve the pizza chef stats.
+        bakingLevelSpan.innerText = updateChefsStats(totalPizzas);
+    }
+
+    //function to calculate total pizzas baked.
+    function calculateTotalPizzas(){
+        // gets the current number of pizzas baked.
+        var currentPizzas = parseInt(document.getElementById("totalPizzas").innerText);
+
+        //Adds the new pizzas to the current pizzas together.
+        var totalPizzas = currentPizzas + newPizzas;
+
+        return totalPizzas;
+    }
+
+    //Funtion for the chef level.
+    function updateChefsStats(totalNumPizzas){
+        if (totalNumPizzas >= 500){
+            return "Master Chef";
+        }
+        else if(totalNumPizzas >= 100){
+            return "Experienced Chef";
+        }
+        else if(totalNumPizzas >= 50){
+            return "Skilled Chef"
+        }
+        else if(totalNumPizzas >= 10){
+            return "Beginning Chef";
+        }
+        else{
+            return "Just-Born Chef";
+        }
+    }
+</script>
+<footer>
+    
+    <nav>
+            <a href="index.html"</a>
+                INDEX/HOME
+        </nav>
+    
+
+</footer>
+
+</body>
+</html>

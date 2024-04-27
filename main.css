@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    color: rgb(150, 255, 136);
+}
+h2{
+    text-align: center;
+    color: rgb(150, 255, 136);
+
+}
+body{
+    background-color: rgb(65, 119, 62);
+}
+img{
+    margin-right: 200px;
+}
+nav{
+    height: 600px;
+    width: 200px
+    padding 5px
+}
+footer{
+    text-align: center;
+}
+nav{
+    color: rgb(150, 255, 136);
+    font-size: xx-large;
+}
+h3{
+    text-align: center;
+    color: rgb(150, 255, 136);
+    font-size: xx-large;
+}
+h4{
+    text-align: center;
+    color: rgb(150, 255, 136);
+    font-size: larger;
+}
+#memeImage{
+    position: absolute;
+    left: 25%
+    top 25%;
+}
